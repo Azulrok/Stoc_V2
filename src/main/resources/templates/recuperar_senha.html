@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Recuperar Senha</title>
+	<link rel="icon" href="img/stoc.png">
+</head>
+<body>
+
+
+
+
+
+<d class = "imag">
+
+	<img id="imag" src="img/stoc.svg">  
+	
+</d>
+<hr>
+
+
+
+ <d id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="login">Login</a>
+		<a href="cadastro">Cadastro</a>
+		<a href="recuperar_senha">Recuperar Senha</a>
+		
+	</d>
+
+
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
+
+
+<center><h1><p class="p2">Recuperar Senha</h1></center>
+
+<style>
+	
+body {
+  background-color: lightblue;
+}
+
+h1{
+
+	color: cadetblue;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+
+	color: cadetblue;
+}
+div{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: Gray;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: Gray;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #A9A9A9;
+}
+
+
+
+div {
+  border-radius: 30px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 30%;
+}
+
+
+body {
+			font-family: "Lato", sans-serif;
+		}
+		.imag  {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+		hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 4.0em;
+    margin-block-end: 0.1em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
+
+
+	.sidenav {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+		}
+
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+		}
+
+		.sidenav a:hover {
+			color: #f1f1f1;
+		}
+
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+
+		@media screen and (max-height: 450px) {
+			.sidenav {padding-top: 15px;}
+			.sidenav a {font-size: 18px;}
+		}
+
+
+
+
+
+
+
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: cadetblue;
+    color: #FFF;
+    width: 99%;
+    height: 99;    
+    text-align: center;
+    line-height: 25px;
+}
+
+
+
+</style>	
+
+<div>
+
+
+
+ <form class="form-horizontal" th:action="@{/cadastro/recuperar_senha}" method="POST"  th:object="${usuarioModel}">
+  <p class="p2">  <label for="
+  cpf">Insira o Cpf cadastro para recuperar senha:</label>
+    <input type="text" maxlength="11" id="cpf" name="cpf" placeholder="Insira seu CPF">
+
+
+
+
+
+<br> <input button type="submit" value="Recuperar">
+
+
+</div>
+</form>
+
+<footer><p class="p2"><p>&copy; Todos os direitos reservados</p></p></footer>
+
+</body>
+</html>
