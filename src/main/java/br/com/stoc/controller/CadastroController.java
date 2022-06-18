@@ -51,6 +51,17 @@ public class CadastroController {
 		return mv;
 
 	}
+
+
+	 
+	   
+	    @GetMapping({"/rel_funcionarios"})
+	    public String relatorioUsuario (ModelMap model) {
+	       
+	        model.addAttribute("funcionarios",usuarioRepository.findAll());
+	        return"rel_funcionarios.html";
+	    }
+	    
 	
 	
 	

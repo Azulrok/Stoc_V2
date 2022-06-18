@@ -20,21 +20,14 @@ public class DocumentoController  {
 		@Autowired
 		private DocumentoRepository documentoRepository;
 		
-		@GetMapping({"/Documento"}) //é o nome que eu quiser colocar
-	    public String home(ModelMap model) { 			
-	    	   
-			
+	
 		
-			 return "Documento.html"; //é o nome do arquivo real	
-	    	    	
-	    }
-		
-		@GetMapping({"/Documento/Documento"}) //é o nome que eu quiser colocar
+		@GetMapping({"lista_relatorio"}) //é o nome que eu quiser colocar
 	    public String listarfuncionario(ModelMap model) { 			
 	    	   
 			 //o findAll lista todos atores 
-			 model.addAttribute("Documento",documentoRepository.findAll());
-			 return "Documento/Documento"; //é o nome do arquivo real	
+			 model.addAttribute("lista_relatorio",documentoRepository.findAll());
+			 return "lista_relatorio.html"; //é o nome do arquivo real	
 	    	    	
 	    }
 	
