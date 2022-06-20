@@ -9,13 +9,13 @@
 
 #footer {width:100%; }
 
-// Small devices (landscape phones, 576px and up)
+/* Small devices (landscape phones, 576px and up)*/
 
-@media (min-width: 576px) {
+@media (min-width: 576px) {}
 
-// Medium devices (tablets, 768px and up)
+/* Medium devices (tablets, 768px and up)*/
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {}
 
 #wrapper {width:90%;  margin: 0 auto; }
 
@@ -23,19 +23,17 @@
 
 #sidebar {width:30%; float:right; }
 
-// Large devices (desktops, 992px and up)
+/* Large devices (desktops, 992px and up)*/
 
-@media (min-width: 992px) { ... }
+@media (min-width: 992px) {}
 
-}
-
-// Extra large devices (large desktops, 1200px and up)
+/* Extra large devices (large desktops, 1200px and up)*/
 
 @media (min-width: 1200px) {
 
 #wrapper {width:90%;  margin: 0 auto; }
-
 }
+
 
    h1{color: blue}
             
@@ -73,7 +71,7 @@
   font-size: 36px;
   margin-left: 50px;
 }
-
+s
 
 #main {
   transition: margin-left .5s;
@@ -85,4 +83,3 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-

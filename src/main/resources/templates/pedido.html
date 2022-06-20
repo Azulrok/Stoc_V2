@@ -33,6 +33,15 @@
   margin-right: auto;
 }
 	
+	input[type=date]{
+		width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+	}
 	
 	input[type=text],select {
   width: 100%;
@@ -156,11 +165,16 @@ div {
   
   
  <br>
-    <label for="inputRefA">Referência A:</label>
-    <input type="text" class="form-control" id="inputrefa">
+    <label for="inputRefA">Item</label>
+    <input type="codigo" class="form-control" id="inputrefa" placeholder="Número do item">
   
   <br>
   
+  <br>
+    <label for="inputRefA">Quantidade</label>
+    <input type="codigo" class="form-control" id="inputrefa">
+  
+  <br>
   
   
   <br>
@@ -172,20 +186,15 @@ div {
   
   <br>
       <label for="inputProp">N° Proposta:</label>
-      <input type="text" class="form-control" id="inputProp">
+      <input type="codigo" class="form-control" id="inputProp">
     
     <br>
     
     
     <br>
       <label for="inputOC">Tipo de Ordem de Compra</label>
-      <select id="inputEstado" class="form-control">
-        <option selected>Escolher...</option>
-        <option>BRI001</option>
-        <option>BRI002</option>
-        <option>BRI003</option>
-        <option>BRI004</option>
-      </select>
+      <input type="codigo" id="inputEstado" class="form-control">
+      
  
     <br>
     
