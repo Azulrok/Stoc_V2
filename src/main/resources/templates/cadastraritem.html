@@ -4,26 +4,14 @@
 	<title>Cadastrar item</title>
 	<link rel="icon" href="img/stoc.png">
 </head>
-	
-
 	<d class = "imag">
-
 	<img id="imag" src="img/stoc.svg">  
-	
 </d>
-	<hr>
-
+<hr>
 	<d th:insert="layout/menu">
-
-	</d>
-
-	
-	
+</d>
 	
 <style>
-		
-
-		
 		
 body {
   background-color: lightblue;
@@ -60,10 +48,6 @@ input[type=local], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-
-
-
 
 input[type=submit] {
   width: 100%;
@@ -139,23 +123,23 @@ footer {
 <div>
   
   <p class="p2">  <label for="nome">Nome do item:</label>
-    <input type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item">
+    <input required type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item">
 	
 	
 	
 <br>
   <p class="p2">  <label for="quantidade">Quantidade de item:</label>
-    <input type="text" id="quantidade" name="quantidade" th:field="*{quantidade}" placeholder="Quantidade de Item">
+    <input required type="number" id="quantidade" name="quantidade" th:field="*{quantidade}" placeholder="Quantidade de Item">
   
   <br><br>Descrição do Item
-  <textarea type="text" id="descricao" name="descricao" rows="4" cols="50"th:field= "*{descricao}" placeholder="descricao:">
+  <textarea required type="text" id="descricao" name="descricao" rows="4" cols="50"th:field= "*{descricao}" placeholder="descricao:">
 </textarea><br>
 
 
 
 <br>
     <label for="localizar" >Insira local de armanezamento:</label>
-   <input type="text" id="localizar" name="localizar" th:field= "*{localizar}"
+   <input required type="text" id="localizar" name="localizar" th:field= "*{localizar}"
    placeholder="local de armanezamento" >
 
 
