@@ -174,16 +174,16 @@
 
 
 			<p class="p2"> <label for="name">Nome da Empresa:</label>
-				<input type="text" id="name" name="empresa" th:field="*{empresa}" placeholder="Nome da empresa:">
+				<input required type="text" id="name" name="empresa" th:field="*{empresa}" placeholder="Nome da empresa:">
 
 				<br>
 			<p class="p2"> <label for="tel">Número do Representante:</label>
-				<input type="tel" id="numero" name="numero" th:field="*{numero}" placeholder="Número do Representante:">
+				<input required type="tel" id="numero" name="numero" th:field="*{numero}" placeholder="Número do Representante:">
 
 
 				<br>
 				<label for="email">Insira E-mail do Fornecedor:</label>
-				<input type="email" id="email" name="email" th:field="*{email}" placeholder="E-mail do Fornecedor">
+				<input required type="email" id="email" name="email" th:field="*{email}" placeholder="E-mail do Fornecedor">
 
 
 				<br> <input button type="submit" value="Enviar">

@@ -158,57 +158,47 @@
 
 		<div>
 			<label for="RMname">Nome do Requisitador:</label>
-			<input type="name" class="form-control" id="inputname" placeholder="Nome">
+			<input required type="name" class="form-control" id="inputname" placeholder="Nome">
 
 			<br>
-
-
 
 
 			<br>
 			<label for="CodDP">Departamento:</label>
-			<input type="codigo" class="form-control" id="inputDP" placeholder="Código do Departamento">
+			<input required type="codigo" class="form-control" id="inputDP" placeholder="Código do Departamento">
 
 			<br>
 
 
 			<br>
 			<label for="inputRefA">Item</label>
-			<input type="codigo" class="form-control" id="inputrefa" placeholder="Número do item">
+			<input required type="codigo" class="form-control" id="inputrefa" placeholder="Número do item">
 
 			<br>
 
 			<br>
 			<label for="inputRefA">Quantidade</label>
-			<input type="codigo" class="form-control" id="inputrefa">
+			<input required type="text" maxlength="3" class="form-control" id="inputrefa">
 
 			<br>
 
 
 			<br>
 			<label for="inputForn">Fornecedor:</label>
-			<input type="text" class="form-control" id="inputFn">
-
-			<br>
+			<input required type="text" class="form-control" id="inputFn">
 
 
 			<br>
-			<label for="inputProp">N° Proposta:</label>
-			<input type="codigo" class="form-control" id="inputProp">
-
-			<br>
-
-
-			<br>
-			<label for="inputOC">Tipo de Ordem de Compra</label>
-			<input type="codigo" id="inputEstado" class="form-control">
+			<br>Descrição do Item
+			<textarea required type="text" id="descricao" name="descricao" rows="4" cols="50" placeholder="descricao:">
+			</textarea>
 
 
 			<br>
+			<br>
 
-
-			<label for="inputCEP">Data de recebimento planejado</label>
-			<input type="date" class="form-control" id="inputCEP">
+			<label for="inputCEP">Data do pedido:</label>
+			<input required type="date" class="form-control" id="inputCEP">
 
 			<br>
 
