@@ -1,165 +1,180 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head><meta charset="utf-8">
+
+<head>
+	<meta charset="utf-8">
 	<title>Cadastrar item</title>
 	<link rel="icon" href="img/stoc.png">
 </head>
-	
-
-	<d class = "imag">
-
-	<img id="imag" src="img/stoc.svg">  
-	
+<d class="imag">
+	<img id="imag" src="img/stoc.svg">
 </d>
-	<hr>
+<hr>
+<d th:insert="layout/menu">
+</d>
 
-	<d th:insert="layout/menu">
-
-	</d>
-
-	
-	
-	
 <style>
-		
+	body {
+		background-color: lightblue;
+	}
 
-		
-		
-body {
-  background-color: lightblue;
-}
+	.p2 {
+		font-family: Arial, Helvetica, sans-serif;
+	}
 
-.p2 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-h1{
+	h1 {
 
-	color: cadetblue;
-}
-div{
- display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+		color: cadetblue;
+	}
 
-input[type=local], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+	div {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
+	input[type=text],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
 
+	input[type=local],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
 
+	input[type=submit] {
+		width: 100%;
+		background-color: Gray;
+		color: white;
+		padding: 10px 10px;
+		margin: 8px 0;
+		text-align: center;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
 
+	input[type=submit]:hover {
+		background-color: #A9A9A9;
+	}
 
-input[type=submit] {
-  width: 100%;
-  background-color: Gray;
-  color: white;
-  padding: 10px 10px;
-  margin: 8px 0;
-  text-align: center;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+	#descricao {
+		width: 100%;
+		padding: auto;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
 
-input[type=submit]:hover {
-  background-color: #A9A9A9;
-}
+	#quantidade {
+		width: 100%;
+		padding: auto;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
 
-div {
-  border-radius: 30px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 30%;
-}
+	div {
+		border-radius: 30px;
+		background-color: #f2f2f2;
+		padding: 20px;
+		width: 30%;
+	}
 
-footer {
-    position: absolute;
-    bottom: 0;
-    background-color: cadetblue;
-    color: #FFF;
-    width: 100%;
-    height: 100;    
-    text-align: center;
-    line-height: 5px;
-}
-
-
-
-   .navbar {
-      overflow: hidden;
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      width: 100%;
-  }
-  
-  
-    .navbar a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 4px 6px;
-      text-decoration: none;
-      font-size: 15px;
-  }
-
-  .navbar a:hover {
-      background: #ddd;
-      color: black;
-  }
+	footer {
+		position: absolute;
+		bottom: 0;
+		background-color: cadetblue;
+		color: #FFF;
+		width: 100%;
+		height: 100;
+		text-align: center;
+		line-height: 5px;
+	}
 
 
+
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+
+	.navbar a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 4px 6px;
+		text-decoration: none;
+		font-size: 15px;
+	}
+
+	.navbar a:hover {
+		background: #ddd;
+		color: black;
+	}
 </style>
 
 
 
 
 <br><br>
-<center><h1><p class="p2">Cadastrar item</h1></center>
+<center>
+	<h1>
+		<p class="p2">Cadastrar item
+	</h1>
+</center>
 
 
-<form name="cadastraritem" class="form-horizontal" th:action="@{/cadastraritem}" method="POST" style="margin: 10px"  th:object="${itemModel}">
-<div>
-  
-  <p class="p2">  <label for="nome">Nome do item:</label>
-    <input type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item">
-	
-	
-	
-<br>
-  <p class="p2">  <label for="quantidade">Quantidade de item:</label>
-    <input type="text" id="quantidade" name="quantidade" th:field="*{quantidade}" placeholder="Quantidade de Item">
-  
-  <br><br>Descrição do Item
-  <textarea type="text" id="descricao" name="descricao" rows="4" cols="50"th:field= "*{descricao}" placeholder="descricao:">
-</textarea><br>
+<form name="cadastraritem" class="form-horizontal" th:action="@{/cadastraritem}" method="POST" style="margin: 10px"
+	th:object="${itemModel}">
+	<div>
+
+		<p class="p2"> <label for="nome">Nome do item:</label>
+			<input required type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item">
 
 
 
-<br>
-    <label for="localizar" >Insira local de armanezamento:</label>
-   <input type="text" id="localizar" name="localizar" th:field= "*{localizar}"
-   placeholder="local de armanezamento" >
+			<br>
+		<p class="p2"> <label for="quantidade">Quantidade de item:</label>
+			<input required type="number" id="quantidade" name="quantidade" th:field="*{quantidade}"
+				placeholder="Quantidade de Item">
+
+			<br><br>Descrição do Item
+			<textarea required type="text" id="descricao" name="descricao" rows="4" cols="50" th:field="*{descricao}"
+				placeholder="descricao:">
+			</textarea><br>
 
 
-<!--
+
+			<br>
+			<label for="localizar">Insira local de armanezamento:</label>
+			<input required type="text" id="localizar" name="localizar" th:field="*{localizar}"
+				placeholder="local de armanezamento">
+
+
+			<!--
   <br><label for="perecivel" >Produto perecivel:</label>
 
   <input type="radio" id="sim" name="drone" value="sim">
@@ -179,15 +194,16 @@ footer {
 -->
 
 
-  <br> <input button type="submit" value="Enviar">
-</div>
+			<br> <input button type="submit" value="Enviar">
+	</div>
 </form>
 <br><br>
 
 
 
-  
+
 <!--<footer><p class="p2">&copy; Todos os direitos reservados</p></footer>-->
 
 </body>
+
 </html>

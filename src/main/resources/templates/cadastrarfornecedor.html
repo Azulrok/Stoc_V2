@@ -1,105 +1,112 @@
 <!DOCTYPE html>
-<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<title>Cadastro fornecedor</title>
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
 </head>
+
 <body>
-	<d class = "imag">
+	<d class="imag">
 
-	<img id="imag" src="img/stoc.svg">  
-	
-</d>
-<hr>
-
-<d th:insert="layout/menu">
+		<img id="imag" src="img/stoc.svg">
 
 	</d>
-	
-	
-<style>
-	
+	<hr>
 
-.p2 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-h1{
+	<d th:insert="layout/menu">
 
-	color: cadetblue;
-}
-div{
- display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=email], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+	</d>
 
 
+	<style>
+		.p2 {
+			font-family: Arial, Helvetica, sans-serif;
+		}
 
-input[type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+		h1 {
 
-input[type=tel], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+			color: cadetblue;
+		}
 
-input[type=submit] {
-  width: 100%;
-  background-color: Gray;
-  color: white;
-  padding: 10px 10px;
-  margin: 8px 0;
-  text-align: center;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+		div {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
-input[type=submit]:hover {
-  background-color: #A9A9A9;
-}
+		input[type=text],
+		select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
 
-div {
-  border-radius: 30px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 30%;
-}
+		input[type=email],
+		select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
 
-		
-		
+
+
+		input[type=password],
+		select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=tel],
+		select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=submit] {
+			width: 100%;
+			background-color: Gray;
+			color: white;
+			padding: 10px 10px;
+			margin: 8px 0;
+			text-align: center;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #A9A9A9;
+		}
+
+		div {
+			border-radius: 30px;
+			background-color: #f2f2f2;
+			padding: 20px;
+			width: 30%;
+		}
+
+
+
 		body {
 			font-family: "Lato", sans-serif;
 		}
@@ -108,88 +115,93 @@ div {
 
 
 
-   .navbar {
-      overflow: hidden;
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      width: 100%;
-  }
+		.navbar {
+			overflow: hidden;
+			background-color: #333;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
 
-  .navbar a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 4px 6px;
-      text-decoration: none;
-      font-size: 17px;
-  }
+		.navbar a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 4px 6px;
+			text-decoration: none;
+			font-size: 17px;
+		}
 
-  .navbar a:hover {
-      background: #ddd;
-      color: black;
-  }
+		.navbar a:hover {
+			background: #ddd;
+			color: black;
+		}
 
-footer {
-    position: bottom;
-    bottom:auto;
-    background-color: cadetblue;
-    color: #FFF;
-    width: 100%;
-    height: 90;    
-    text-align: center;
-    line-height: 50px;
-}
-
-
-
-</style>
-
-
-
-	
-	
-
-	<center><h1><p class="p2">Cadastro de Fornecedor</h1></center>
-	
-	
-
-
-<div>
- <form name="cadastrarfornecedor" class="form-horizontal" th:action="@{/cadastrarfornecedor}" method="POST" style="margin: 10px"  th:object="${fornecedorModel}">  
- 
- <label for="basic-url" class="font-weight-bold">Nome do fornecedor</label>
-	<input class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}" placeholder="Nome do fornecedor" required onkeyup="return AlteraMaiusculas(this)"/>
-	
-  
-	<p class="p2">  <label for="name">Nome da Empresa:</label>
-    <input type="text" id="name" name="empresa" th:field="*{empresa}" placeholder="Nome da empresa:">
-    
-    <br>
-    <p class="p2">  <label for="tel">Número do Representante:</label>
-    <input type="tel" id="numero" name="numero" th:field= "*{numero}" placeholder="Número do Representante:">
-   
-
-<br>
-    <label for="email" >Insira E-mail do Fornecedor:</label>
-   <input type="email" id="email" name="email"  th:field="*{email}"
-   placeholder="E-mail do Fornecedor" >
-
-
-  <br> <input button type="submit" value="Enviar">
-</div>
-</form>
-
-
-
-<br>
-  
+		footer {
+			position: bottom;
+			bottom: auto;
+			background-color: cadetblue;
+			color: #FFF;
+			width: 100%;
+			height: 90;
+			text-align: center;
+			line-height: 50px;
+		}
+	</style>
 
 
 
 
-<footer><p class="p2">&copy; Todos os direitos reservados</p></footer>
+
+
+	<center>
+		<h1>
+			<p class="p2">Cadastro de Fornecedor
+		</h1>
+	</center>
+
+
+
+
+	<div>
+		<form name="cadastrarfornecedor" class="form-horizontal" th:action="@{/cadastrarfornecedor}" method="POST"
+			style="margin: 10px" th:object="${fornecedorModel}">
+
+			<label for="basic-url" class="font-weight-bold">Nome do fornecedor</label>
+			<input class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}"
+				placeholder="Nome do fornecedor" required onkeyup="return AlteraMaiusculas(this)" />
+
+
+			<p class="p2"> <label for="name">Nome da Empresa:</label>
+				<input type="text" id="name" name="empresa" th:field="*{empresa}" placeholder="Nome da empresa:">
+
+				<br>
+			<p class="p2"> <label for="tel">Número do Representante:</label>
+				<input type="tel" id="numero" name="numero" th:field="*{numero}" placeholder="Número do Representante:">
+
+
+				<br>
+				<label for="email">Insira E-mail do Fornecedor:</label>
+				<input type="email" id="email" name="email" th:field="*{email}" placeholder="E-mail do Fornecedor">
+
+
+				<br> <input button type="submit" value="Enviar">
+	</div>
+	</form>
+
+
+
+	<br>
+
+
+
+
+
+	<footer>
+		<p class="p2">&copy; Todos os direitos reservados</p>
+	</footer>
 
 </body>
+
 </html>
