@@ -94,7 +94,16 @@
 			border-radius: 4px;
 			box-sizing: border-box;
 		}
-
+	input[type=number],
+		select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
 
 
 		input[type=password],
@@ -212,23 +221,23 @@
 			<p class="p2">
 				<label for="basic-url" class="font-weight-bold">Nome de usuario</label>
 				<input required class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}"
-					placeholder="Nome completo" required onkeyup="return AlteraMaiusculas(this)" />
+					placeholder="Nome completo"  onkeyup="return AlteraMaiusculas(this)" />
 
 
 
 				<label for="basic-url" class="font-weight-bold">CPF:</label>
 				<input required class="form-control" type="number" maxlength="11" name="cpf" th:field="*{cpf}"
-					placeholder="Digite somente números" required onkeypress="return somenteNumeros(event)" />
+					placeholder="Digite somente números"  onkeypress="return somenteNumeros(event)" />
 
 
 
 				<label for="basic-url" class="font-weight-bold">E-mail</label>
 				<input required maxlenght="70" class="form-control" type="email" name="email" th:field="*{email}"
-					placeholder="Email" required />
+					placeholder="Email" />
 
 				<label for="basic-url" class="font-weight-bold">Confirmar E-mail</label>
 				<input class="form-control" type="email" name="confirmar_email" placeholder="Confirmar email"
-					required />
+					 />
 
 
 
@@ -244,7 +253,7 @@
 
 
 				<input type="radio" id="outro" name="drone" value="outro">
-				<label for="outro">Outros</label>
+				<label for="outro">LGBTQIA+</label>
 
 				<br> <input button type="submit" value="Enviar">
 	</div>
