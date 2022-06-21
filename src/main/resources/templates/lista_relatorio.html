@@ -3,7 +3,7 @@
 <!-- Importa as configurações de cabecalho -->
 
 <head th:insert="layout/cabecalho">
-<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
 	<title>Lista de Funcionarios</title>
 	<!-- Importa o cabecalho -->
@@ -11,39 +11,41 @@
 
 
 
-	<d class = "imag">
+<d class="imag">
 
-	<img id="imag" src="img/stoc.svg">  
-	
+	<img id="imag" src="img/stoc.svg">
+
 </d>
 <hr>
 
-	<d th:insert="layout/menu">
+<d th:insert="layout/menu">
 
-	</d>
-	
-
-	<div class="container">
-		<!-- Importa o menu padrão do sistema -->
-	
-		<br>
-		<h1>
-		
-			<center><p2 class="p2">Listagem</p2></center>
-		</h1>
-		
-		<br>
-
-		<a href="/consulta" class="btn btn-info" role="button">Lista de itens</a>
-		<a href="/lista_fornecedores" class="btn btn-info" role="button">Lista de Fornecedores</a>
-		<a href="/lista_funcionarios" class="btn btn-info" role="button">Lista de Funcionarios</a>
-		
-		
-		
-
-	
+</d>
 
 
-</body>
+<div class="container">
+	<!-- Importa o menu padrão do sistema -->
+
+	<br>
+	<h1>
+
+		<center>
+			<p2 class="p2">Listagem</p2>
+		</center>
+	</h1>
+
+	<br>
+
+	<a href="/consulta" class="btn btn-info" role="button">Lista de itens</a>
+	<a href="/lista_fornecedores" class="btn btn-info" role="button">Lista de Fornecedores</a>
+	<a href="/lista_funcionarios" class="btn btn-info" role="button">Lista de Funcionarios</a>
+
+
+
+
+
+
+
+	</body>
 
 </html>

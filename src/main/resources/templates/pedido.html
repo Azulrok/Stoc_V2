@@ -1,217 +1,228 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8">
+
+<head>
+	<meta charset="utf-8">
 	<title>pedido de item</title>
 	<link rel="icon" href="img/stoc.png">
-	</head>
-	
-	
-	  <d class = "imag">
+</head>
 
-	<img id="imag" src="img/stoc.svg">  
-	
+
+<d class="imag">
+
+	<img id="imag" src="img/stoc.svg">
+
 </d>
 
-	<style>
-
-
-	
-	
+<style>
 	.p2 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-	
-	
-	h1{
-
-	color: cadetblue;
-}
-	
-	div{
- display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-	
-	input[type=date]{
-		width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+		font-family: Arial, Helvetica, sans-serif;
 	}
-	
-	input[type=text],select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-		input[type=codigo],select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-		input[type=name],select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=submit] {
-  width: 100%;
-  background-color: Gray;
-  color: white;
-  padding: 10px 10px;
-  margin: 8px 0;
-  text-align: center;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-	   .navbar a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 4px 6px;
-      text-decoration: none;
-      font-size: 15px;
-  }
-   .navbar a:hover {
-      background: #ddd;
-      color: black;
-  }
 
 
+	h1 {
 
- .navbar {
-      overflow: hidden;
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      width: 100%;
+		color: cadetblue;
+	}
 
-  }
-  
+	div {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-div {
-  border-radius: 30px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 30%;
-}
-	
+	input[type=date] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	input[type=text],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	input[type=codigo],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	input[type=name],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	input[type=submit] {
+		width: 100%;
+		background-color: Gray;
+		color: white;
+		padding: 10px 10px;
+		margin: 8px 0;
+		text-align: center;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	.navbar a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 4px 6px;
+		text-decoration: none;
+		font-size: 15px;
+	}
+
+	.navbar a:hover {
+		background: #ddd;
+		color: black;
+	}
+
+
+
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		position: fixed;
+		top: 0;
+		width: 100%;
+
+	}
+
+
+	div {
+		border-radius: 30px;
+		background-color: #f2f2f2;
+		padding: 20px;
+		width: 30%;
+	}
+
 	footer {
-    position: bottom;
-    bottom:auto;
-    background-color: cadetblue;
-    color: #FFF;
-    width: 100%;
-    height: 90;    
-    text-align: center;
-    line-height: 50px;
-}
-	
-	</style>
+		position: bottom;
+		bottom: auto;
+		background-color: cadetblue;
+		color: #FFF;
+		width: 100%;
+		height: 90;
+		text-align: center;
+		line-height: 50px;
+	}
+</style>
 
 
 
 
 <hr>
-	</d>
+</d>
 
-	<d th:insert="layout/menu">
+<d th:insert="layout/menu">
 
-	</d>
+</d>
 
-	
-	
+
+
 <br><br>
 
 
 <body>
 
-<form>
-<center><h1><p class="p2">Pedido de Item</h1></center>
+	<form>
+		<center>
+			<h1>
+				<p class="p2">Pedido de Item
+			</h1>
+		</center>
 
-  <div>
-      <label for="RMname">Nome do Requisitador:</label>
-      <input type="name" class="form-control" id="inputname" placeholder="Nome">
-  
-    <br>
-    
-    
-    
-    
-<br>
-      <label for="CodDP">Departamento:</label>
-      <input type="codigo" class="form-control" id="inputDP" placeholder="Código do Departamento">
-  
-  <br>
-  
-  
- <br>
-    <label for="inputRefA">Item</label>
-    <input type="codigo" class="form-control" id="inputrefa" placeholder="Número do item">
-  
-  <br>
-  
-  <br>
-    <label for="inputRefA">Quantidade</label>
-    <input type="codigo" class="form-control" id="inputrefa">
-  
-  <br>
-  
-  
-  <br>
-    <label for="inputForn">Fornecedor:</label>
-    <input type="text" class="form-control" id="inputFn">
-  
-  <br>
-  
-  
-  <br>
-      <label for="inputProp">N° Proposta:</label>
-      <input type="codigo" class="form-control" id="inputProp">
-    
-    <br>
-    
-    
-    <br>
-      <label for="inputOC">Tipo de Ordem de Compra</label>
-      <input type="codigo" id="inputEstado" class="form-control">
-      
- 
-    <br>
-    
+		<div>
+			<label for="RMname">Nome do Requisitador:</label>
+			<input type="name" class="form-control" id="inputname" placeholder="Nome">
 
-      <label for="inputCEP">Data de recebimento planejado</label>
-      <input type="date" class="form-control" id="inputCEP">
-    
-  <br>
-  
- 
-    <br>
-  <input button type="submit" value="Enviar">
-  
-    </div>
-</form>
+			<br>
 
 
-<footer><p class="p2">&copy; Todos os direitos reservados</p></footer>
+
+
+			<br>
+			<label for="CodDP">Departamento:</label>
+			<input type="codigo" class="form-control" id="inputDP" placeholder="Código do Departamento">
+
+			<br>
+
+
+			<br>
+			<label for="inputRefA">Item</label>
+			<input type="codigo" class="form-control" id="inputrefa" placeholder="Número do item">
+
+			<br>
+
+			<br>
+			<label for="inputRefA">Quantidade</label>
+			<input type="codigo" class="form-control" id="inputrefa">
+
+			<br>
+
+
+			<br>
+			<label for="inputForn">Fornecedor:</label>
+			<input type="text" class="form-control" id="inputFn">
+
+			<br>
+
+
+			<br>
+			<label for="inputProp">N° Proposta:</label>
+			<input type="codigo" class="form-control" id="inputProp">
+
+			<br>
+
+
+			<br>
+			<label for="inputOC">Tipo de Ordem de Compra</label>
+			<input type="codigo" id="inputEstado" class="form-control">
+
+
+			<br>
+
+
+			<label for="inputCEP">Data de recebimento planejado</label>
+			<input type="date" class="form-control" id="inputCEP">
+
+			<br>
+
+
+			<br>
+			<input button type="submit" value="Enviar">
+
+		</div>
+	</form>
+
+
+	<footer>
+		<p class="p2">&copy; Todos os direitos reservados</p>
+	</footer>
 </body>
+
 </html>
