@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!-- Importa as configurações de cabecalho -->
+
+<head th:insert="layout/cabecalho">
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="icon" href="img/stoc.png">
+	<title>Lista de Funcionarios</title>
+	<!-- Importa o cabecalho -->
+</head>
+
+
+
+<d class="imag">
+
+	<img id="imag" src="img/stoc.svg">
+
+</d>
+<hr>
+
+<d th:insert="layout/menu">
+
+</d>
+
+
+<div class="container">
+	<!-- Importa o menu padrão do sistema -->
+
+	<br>
+	<h1>
+
+		<center>
+			<p2 class="p2">Lista de Itens</p2>
+		</center>
+		
+		<table class="table table-sm table-striped table-hover table-bordered">
+		<thead>
+			<tr>
+				<th class="col-2">Código da movimentação</th>
+				<th class="col-2">Descrição do item</th>
+				<th class="col-1">Data de entrada</th>
+				<th class="col-1">Data de saída</th>
+                <th class="col-1">Quantidade de entrada</th>
+                <th class="col-1">Quantidade de saída</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="movimentacao:${histmovimentacao}">
+
+				<td th:text="${movimentacao.cod_movimentacao}"></td>
+
+				<td th:text="${item.descricao}"></td>
+
+				<td th:text="${movimentacao.descricao}"></td>
+
+				<td th:text="${movimentacao.localizar}"></td>
+
+				<td>
+					<a class="delete btn btn-sm btn-danger" th:href="@{deletar_item/{id}(id=${item.IdItem})}"
+						onclick="if (confirm('Deseja realmente excluir o item?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
+				</td>
+
+			</tr>
+		</tbody>
+	</table>
+	
+	</h1>
+</div>
+</html>
+	
+	

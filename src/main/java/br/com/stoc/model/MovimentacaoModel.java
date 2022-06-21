@@ -20,9 +20,9 @@ import javax.persistence.Table;
 		@Id
 		@Column(name = "id_movimentacao")
 		private Long IdMovimentacao;
-		@Column(name = "coditem")
+		@Column(name = "cod_item")
 		private Integer CodItem;
-		@Column(name = "coddata")
+		@Column(name = "cod_data")
 		private Integer CodData;
 		public Long getIdMovimentacao() {
 			return IdMovimentacao;
