@@ -5,7 +5,7 @@
 <head th:insert="layout/cabecalho">
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
-	<title>Lista de Funcionarios</title>
+	<title>Movimentação de itens</title>
 	<!-- Importa o cabecalho -->
 </head>
 
@@ -28,43 +28,42 @@
 
 	<br>
 	<h1>
-
 		<center>
-			<p2 class="p2">Lista de Itens</p2>
+			<p2 class="p2">Movimentação de Itens</p2>
 		</center>
-		
+	</h1>
+	
 		<table class="table table-sm table-striped table-hover table-bordered">
 		<thead>
 			<tr>
 				<th class="col-2">Código da movimentação</th>
-				<th class="col-2">Descrição do item</th>
-				<th class="col-1">Data de entrada</th>
-				<th class="col-1">Data de saída</th>
-                <th class="col-1">Quantidade de entrada</th>
-                <th class="col-1">Quantidade de saída</th>
+				<th class="col-2">Código do pedido</th>
+				<th class="col-2">Código do item</th>
+				<th class="col-2">Data de entrada</th>
+				<th class="col-2">Data de saída</th>
+                <th class="col-2">Quantidade de entrada</th>
+                <th class="col-2">Quantidade de saída</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="movimentacao:${histmovimentacao}">
+			<th:each="movimentacao:${histmovimentacao}">
+              <tr>
+				<td th:text="${movimentacao.id_movimentacao}"></td>
+				
+			    <td th:text="${movimentacao.id_pedido}"></td>
 
-				<td th:text="${movimentacao.cod_movimentacao}"></td>
+				<td th:text="${movimentacao.cod_item}"></td>
 
-				<td th:text="${item.descricao}"></td>
+				<td th:text="${movimentacao.cod_dataentrada}"></td>
 
-				<td th:text="${movimentacao.descricao}"></td>
-
-				<td th:text="${movimentacao.localizar}"></td>
-
-				<td>
-					<a class="delete btn btn-sm btn-danger" th:href="@{deletar_item/{id}(id=${item.IdItem})}"
-						onclick="if (confirm('Deseja realmente excluir o item?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
-				</td>
-
+				<td th:text="${movimentacao.cod_datasaida}"></td>
+				
+				<td th:text="${movimentacao.cod_quantentrada}"></td>
+				
+				<td th:text="${movimentacao.cod_quantsaida}"></td>
 			</tr>
 		</tbody>
 	</table>
-	
-	</h1>
 </div>
 </html>
 	
