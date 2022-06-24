@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Cadastrar item</title>
+	<title>Cadastro item</title>
 	<link rel="icon" href="img/stoc.png">
 </head>
 <d class="imag">
@@ -152,16 +152,16 @@
 	<div>
 
 		<p class="p2"> <label for="nome">Nome do item:</label>
-			<input required type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item">
+			<input required type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item"><br>
 
 
 
 			<br>
-		<p class="p2"> <label for="quantidade">Quantidade de item:</label>
+		<p class="p2"> <label for="quantidade">Quantidade do item:</label>
 			<input required type="number" id="quantidade" name="quantidade" th:field="*{quantidade}"
-				placeholder="Quantidade de Item">
+				placeholder="Quantidade de Item"><br>
 
-			<br><br>Descrição do Item
+			<br>Descrição do Item:<br>
 			<textarea required type="text" id="descricao" name="descricao" rows="4" cols="50" th:field="*{descricao}"
 				placeholder="descricao:">
 			</textarea><br>
@@ -169,7 +169,7 @@
 
 
 			<br>
-			<label for="localizar">Insira local de armanezamento:</label>
+			<label for="localizar">Insira local de armazenamento:</label>
 			<input required type="text" id="localizar" name="localizar" th:field="*{localizar}"
 				placeholder="local de armanezamento">
 
@@ -200,10 +200,5 @@
 <br><br>
 
 
-
-
-<!--<footer><p class="p2">&copy; Todos os direitos reservados</p></footer>-->
-
 </body>
-
 </html>
