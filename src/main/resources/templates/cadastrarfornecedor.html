@@ -168,7 +168,7 @@
 		<form name="cadastrarfornecedor" class="form-horizontal" th:action="@{/cadastrarfornecedor}" method="POST"
 			style="margin: 10px" th:object="${fornecedorModel}">
 
-			<label for="basic-url" class="font-weight-bold">Nome do fornecedor</label>
+			<label for="basic-url" class="font-weight-bold">Nome do Fornecedor</label>
 			<input class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}"
 				placeholder="Nome do fornecedor" required onkeyup="return AlteraMaiusculas(this)" />
 
@@ -182,7 +182,7 @@
 
 
 				<br>
-				<label for="email">Insira E-mail do Fornecedor:</label>
+				<label for="email">E-mail do Fornecedor:</label>
 				<input required type="email" id="email" name="email" th:field="*{email}" placeholder="E-mail do Fornecedor"/>
 
 
@@ -194,14 +194,5 @@
 
 	<br>
 
-
-
-
-
-	<footer>
-		<p class="p2">&copy; Todos os direitos reservados</p>
-	</footer>
-
 </body>
-
 </html>
