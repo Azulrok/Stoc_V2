@@ -5,7 +5,7 @@
 <head th:insert="layout/cabecalho">
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
-	<title>Lista de Funcionarios</title>
+	<title>Lista de Usuários</title>
 	<!-- Importa o cabecalho -->
 </head>
 
@@ -30,7 +30,7 @@
 	<h1>
 
 		<center>
-			<p2 class="p2">Lista de Funcionários Cadastrados</p2>
+			<p2 class="p2">Lista de Usuários Cadastrados</p2>
 		</center>
 	</h1>
 
@@ -73,21 +73,16 @@
 
 				<td>
 					<a class=" btn btn-sm btn-danger"
-						th:href="@{alterar_usuario/{id}(id=${usuario.id_usuario})}">Alterar </a>
+						th:href="@{alterar_usuario/{id}(id=${usuario.id_usuario})}">Alterar</a>
 					<a class="delete btn btn-sm btn-danger" th:href="@{deletar/{id}(id=${usuario.id_usuario})}"
-						onclick="if (confirm('Deseja realmente excluir o funcionario?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
+						onclick="if (confirm('Deseja realmente excluir o usuário?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
 				</td>
 
 			</tr>
 		</tbody>
 	</table>
 
-
-
-
 </div>
 
-
 </body>
-
 </html>
