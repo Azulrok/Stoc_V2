@@ -203,25 +203,6 @@
 			}
 		}
 
-
-
-
-
-
-
-
-
-
-		footer {
-			position: absolute;
-			bottom: 0;
-			background-color: cadetblue;
-			color: #FFF;
-			width: 99%;
-			height: 99;
-			text-align: center;
-			line-height: 25px;
-		}
 	</style>
 
 	<div>
@@ -231,7 +212,7 @@
 		<form class="form-horizontal" th:action="@{/cadastro/recuperar_senha}" method="POST"
 			th:object="${usuarioModel}">
 			<p class="p2"> <label for="
-  cpf">Insira o Cpf cadastro para recuperar senha:</label>
+  cpf">Insira o CPF cadastrado para recuperar a senha:</label>
 				<input type="text" maxlength="11" id="cpf" name="cpf" placeholder="Insira seu CPF">
 
 
@@ -244,12 +225,5 @@
 	</div>
 	</form>
 
-	<footer>
-		<p class="p2">
-		<p>&copy; Todos os direitos reservados</p>
-		</p>
-	</footer>
-
 </body>
-
 </html>
