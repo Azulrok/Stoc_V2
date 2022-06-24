@@ -34,8 +34,11 @@
 		</center>
 	</h1>
 
+	<b>
 
+	<a href="/movimentacao" class="btn btn-info" role="button">Nova Movimentação</a>
 
+	</b>
 
 	<!-- Retorna uma mensagem na tela para o usuário após a operação -->
 
@@ -50,29 +53,29 @@
 	<table class="table table-sm table-striped table-hover table-bordered">
 		<thead>
 			<tr>
-				<th class="col-2">Id Movimentacao</th>
+				<th class="col-2">Nome do Item</th>
 				<th class="col-2">Pedido</th>
 				<th class="col-2">Item</th>
-				<th class="col-2">Data de Cadastro</th>
 				<th class="col-2">Quantidade Saida</th>
 				<th class="col-2">Quantidade Entrada</th>
+				<th class="col-2">Data de Cadastro</th>
 							</tr>
 
 		</thead>
 		<tbody>
 			<tr th:each="movimentacao:${movimentacoes}">
 
-				<td th:text="${movimentacao.IdMovimentacao}"></td>
+				<td th:text="${movimentacao.Nome}"></td>
 				
-				<td th:text="${movimentacao.IdPedido}"></td>
+			 <td th:text="${movimentacao.IdPedido}"></td>
 				
 				<td th:text="${movimentacao.CodItem}"></td>
-				
-				<td th:text="${movimentacao.DataCadastro}"></td>
-			
+											
 				<td th:text="${movimentacao.QuantidadeSaida}"></td>
 				
 				<td th:text="${movimentacao.QuantidadeEntrada}"></td>
+				
+				<td th:text="${movimentacao.DataCadastro}"></td>
 
 			</tr>
 		</tbody>

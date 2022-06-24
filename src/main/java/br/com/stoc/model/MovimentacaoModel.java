@@ -7,8 +7,11 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.Valid;
 
 
 
@@ -19,6 +22,7 @@ import javax.persistence.Table;
 
 		private static final long serialVersionUID = 1L;
 		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		@Column(name = "id_movimentacao")
 		private Long idMovimentacao;
 		@Column(name = "id_pedido")
@@ -31,7 +35,8 @@ import javax.persistence.Table;
 		private Integer quantidadeSaida;
 		@Column(name = "quantidade_entrada")
 		private Integer quantidadeEntrada;
-		
+		@Column(name = "nome")
+		private String Nome;
 			
 		public Long getIdMovimentacao() {
 			return idMovimentacao;
@@ -69,6 +74,14 @@ import javax.persistence.Table;
 		public void setQuantidadeEntrada(Integer quantidadeEntrada) {
 			this.quantidadeEntrada = quantidadeEntrada;
 		}
+		public String getNome() {
+			return Nome;
+		}
+		public void setNome(String nome) {
+			Nome = nome;
+		}
+	
+	
 		
 		
 		

@@ -73,7 +73,7 @@
 
 				<td>
 					<a class=" btn btn-sm btn-danger"
-						th:href="@{alterar_usuario/{id}(id=${usuario.id_usuario})}">Aletrar </a>
+						th:href="@{alterar_usuario/{id}(id=${usuario.id_usuario})}">Alterar </a>
 					<a class="delete btn btn-sm btn-danger" th:href="@{deletar/{id}(id=${usuario.id_usuario})}"
 						onclick="if (confirm('Deseja realmente excluir o funcionario?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
 				</td>
