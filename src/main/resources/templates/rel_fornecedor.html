@@ -2,9 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head th:insert="layout/cabecalho">
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
-	<title>Lista de Funcionarios</title>
+	<title>Relatório de Fornecedores</title>
 </head>
 <d class="imag">
 	<img id="imag" src="img/stoc.svg">
@@ -18,7 +19,7 @@
 			<br>
 			<h1>
 				<center>
-					<p2 class="p2">Relatorio de Fornecedores</p2>
+					<p2 class="p2">Relatório de Fornecedores</p2>
 				</center>
 			</h1>
 			<div th:classappend="${mensagem == null ? '' : ''}">
