@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Criação de conta</title>
+	<title>Cadastro de Usuário</title>
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
 </head>
@@ -219,15 +219,15 @@
 
 			<input class="form-control" type="hidden" maxlength="50" name="id_usuario" th:field="*{id_usuario}" />
 			<p class="p2">
-				<label for="basic-url" class="font-weight-bold">Nome de usuario</label>
+				<label for="basic-url" class="font-weight-bold">Nome de usuário</label>
 				<input required class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}"
-					placeholder="Nome completo"  onkeyup="return AlteraMaiusculas(this)" />
+					placeholder="Nome"  onkeyup="return AlteraMaiusculas(this)" />
 
 
 
 				<label for="basic-url" class="font-weight-bold">CPF:</label>
 				<input required class="form-control" type="number" maxlength="11" name="cpf" th:field="*{cpf}"
-					placeholder="Digite somente números"  onkeypress="return somenteNumeros(event)" />
+					placeholder="CPF"  onkeypress="return somenteNumeros(event)"/>
 
 
 
@@ -236,31 +236,23 @@
 					placeholder="Email" />
 
 				<label for="basic-url" class="font-weight-bold">Confirmar E-mail</label>
-				<input required class="form-control" type="email" name="confirmar_email" placeholder="Confirmar email"/>
+				<input required class="form-control" type="email" name="confirmar_email" placeholder="Confirmar Email"/><br>
 
 
 
 				<br><label for="sexo">Sexo:</label>
 				<input type="radio" id="homem" name="drone" value="homem" checked>
-				<label for="homem">Homem</label>
+				<label for="homem">Masculino</label>
 
 
 
 				<input type="radio" id="mulher" name="drone" value="mulher">
-				<label for="mulher">Mulher</label>
+				<label for="mulher">Feminino</label><br>
 
 
 				<br> <input button type="submit" value="Enviar">
 	</div>
 	</form>
 
-
-
-
-	<footer>
-		<p class="p2">&copy; Todos os direitos reservados</p>
-	</footer>
-
 </body>
-
 </html>
