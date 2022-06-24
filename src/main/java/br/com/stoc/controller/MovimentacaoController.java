@@ -25,7 +25,7 @@ public class MovimentacaoController {
     public String home(ModelMap model) { 			
     	   
 		
-		 model.addAttribute("histmovimentacao",movimentacaoRepository.findAll());
+		 model.addAttribute("movimentacoes",movimentacaoRepository.findAll());
 		 return "histmovimentacao.html"; //é o nome do arquivo real	
     	    	
     }
