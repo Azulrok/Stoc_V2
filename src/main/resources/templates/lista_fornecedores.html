@@ -1,7 +1,6 @@
 <!--
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<!-- Importa as configurações de cabecalho -->
 
 
 <link rel="icon" href="img/stoc.png">
@@ -25,7 +24,6 @@
 
 
 <div class="container">
-	<!-- Importa o menu padrão do sistema -->
 
 	<br>
 	<h1>
@@ -43,9 +41,6 @@
 	</b>
 
 
-	<!-- Retorna uma mensagem na tela para o usuário após a operação -->
-
-	<!-- Recebe a mensagem de retorno da operação e a configuração do tipo da mensagem do controller -->
 	<div th:classappend="${mensagem == null ? '' : ''}">
 		<div th:classappend="${tipo_mensagem}">
 			<td th:text="${mensagem}"></td>
