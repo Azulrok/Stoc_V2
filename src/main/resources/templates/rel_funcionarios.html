@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
-	<title>Relatorio de Funcionários</title>
+	<title>Relatório de Usuários</title>
 </head>
 <d class="imag">
 	<img id="imag" src="img/stoc.svg">
@@ -19,7 +19,7 @@
 			<br>
 			<h1>
 				<center>
-					<p2 class="p2">Relatório de Funcionários</p2>
+					<p2 class="p2">Relatório de Usuários</p2>
 				</center>
 			</h1>
 			<div th:classappend="${mensagem == null ? '' : ''}">
@@ -45,10 +45,15 @@
 				</tbody>
 			</table>
 
-			<form>
-				<button type="button" class="btn btn-primary mb-2 mr-2" onClick="window.print()">Imprimir/Salvar
-					PDF</button>
-			</form>
+		<style type="text/css">
+			
+			@media print {
+				#noprint { display: none; }
+				button { opacity: 0%; }
+			}
+		</style>
+			
+		<button onClick="window.print()" class="btn btn-primary mb-2 mr-2"  onChange="hidden"> Imprimir/Salvar PDF </button>
 </div>
 
 </body>
