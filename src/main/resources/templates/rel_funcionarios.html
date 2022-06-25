@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
@@ -56,5 +57,87 @@
 		<button onClick="window.print()" class="btn btn-primary mb-2 mr-2"  onChange="hidden"> Imprimir/Salvar PDF </button>
 </div>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<link rel="icon" href="img/stoc.png">
+<title>Relatório de Usuários</title>
+
+<head th:insert="layout/cabecalho">
+<link rel="stylesheet" href="estilo.css">
+</head>
+
+
+
+<d class="imag">
+	<img id="imag" src="img/stoc.svg">
+</d>
+
+<hr>
+
+<d th:insert="layout/menu">
+</d>
+
+
+<div class="container">
+	<!-- Importa o menu padrão do sistema -->
+
+	<br><h1>
+
+		<center>
+			<p2 class="p2">Relatório de Usuários</p2>
+		</center>
+
+	</h1>
+
+	<div th:classappend="${mensagem == null ? '' : ''}">
+		<div th:classappend="${tipo_mensagem}">
+			<td th:text="${mensagem}"></td>
+		</div>
+	</div>
+
+
+	<table class="table table-sm table-striped table-hover table-bordered">
+
+		<thead>
+			<tr>
+				<th class="col-1">Nome</th>
+				<th class="col-2">Cpf</th>
+				<th class="col-1">Email</th>
+				<th class="col-1">Ação</th>
+
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="usuario:${usuarios}">
+
+				<td th:text="${usuario.nome}"></td>
+
+				<td th:text="${usuario.cpf}"></td>
+
+				<td th:text="${usuario.email}"></td>
+
+			</tr>
+
+		</tbody>
+
+	</table>
+
+		<style type="text/css">
+			
+			@media print {
+				#noprint { display: none; }
+				button { opacity: 0%; }
+			}
+		</style>
+			
+		<button onClick="window.print()" class="btn btn-primary mb-2 mr-2"> Imprimir/Salvar PDF </button>
+
+
+</div>
 </body>
 </html>
