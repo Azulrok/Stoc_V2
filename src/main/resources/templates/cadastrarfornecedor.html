@@ -137,17 +137,6 @@
 			background: #ddd;
 			color: black;
 		}
-
-		footer {
-			position: bottom;
-			bottom: auto;
-			background-color: cadetblue;
-			color: #FFF;
-			width: 100%;
-			height: 90;
-			text-align: center;
-			line-height: 50px;
-		}
 	</style>
 
 
@@ -174,25 +163,25 @@
 
 
 			<p class="p2"> <label for="name">Nome da Empresa:</label>
-				<input required type="text" id="name" name="empresa" th:field="*{empresa}" placeholder="Nome da empresa:"/>
+				<input required type="text" id="name" name="empresa" th:field="*{empresa}"
+					placeholder="Nome da empresa:" />
 
 				<br>
 			<p class="p2"> <label for="tel">Número do Representante:</label>
-				<input required type="tel" id="numero" name="numero" th:field="*{numero}" placeholder="Número do Representante:"/>
+				<input required type="tel" id="numero" name="numero" th:field="*{numero}"
+					placeholder="Número do Representante:" />
 
 
 				<br>
 				<label for="email">E-mail do Fornecedor:</label>
-				<input required type="email" id="email" name="email" th:field="*{email}" placeholder="E-mail do Fornecedor"/>
+				<input required type="email" id="email" name="email" th:field="*{email}"
+					placeholder="E-mail do Fornecedor" />
 
 
-				<br> <input button type="submit" value="Enviar"/>
+				<br> <input button type="submit" value="Enviar" />
+
+		</form>
 	</div>
-	</form>
-
-
-
-	<br>
-
 </body>
+
 </html>
