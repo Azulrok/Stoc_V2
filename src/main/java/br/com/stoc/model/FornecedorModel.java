@@ -59,12 +59,4 @@ public class FornecedorModel implements Serializable{
 		Email = email;
 	}
 	
-	
-	
 }
-	
-	
-	
-	
-	
-	

@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <!-- Importa as configurações de cabecalho -->
 
-
-<link rel="icon" href="img/stoc.png">
-	<title>Lista de Funcionários</title>
 <head th:insert="layout/cabecalho">
 	<link rel="stylesheet" href="estilo.css">
+	<link rel="icon" href="img/stoc.png">
+	<title>Movimentação</title>
+	<!-- Importa o cabecalho -->
 </head>
 
 
@@ -30,17 +30,15 @@
 	<h1>
 
 		<center>
-			<p2 class="p2">Lista de Itens</p2>
+			<p2 class="p2">Movimentação</p2>
 		</center>
 	</h1>
 
 	<b>
 
-		<a href="/cadastraritem" class="btn btn-info" role="button">Novo Item</a>
-		<a href="/rel_item" class="btn btn-info" role="button">Relatório</a>
+	<a href="/movimentacao" class="btn btn-info" role="button">Nova Movimentação</a>
 
 	</b>
-
 
 	<!-- Retorna uma mensagem na tela para o usuário após a operação -->
 
@@ -55,36 +53,40 @@
 	<table class="table table-sm table-striped table-hover table-bordered">
 		<thead>
 			<tr>
-				<th class="col-2">Nome do item</th>
-				<th class="col-2">Quantidade</th>
-				<th class="col-2">Descrição</th>
-				<th class="col-1">Localizar</th>
-				<th class="col-1">Excluir</th>
+				<th class="col-2">Nome do Item</th>
+				<th class="col-2">Pedido</th>
+				<th class="col-2">Item</th>
+				<th class="col-2">Quantidade Saida</th>
+				<th class="col-2">Quantidade Entrada</th>
+				<th class="col-2">Data de Cadastro</th>
+							</tr>
 
-			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="item:${consulta}">
+			<tr th:each="movimentacao:${movimentacoes}">
 
-				<td th:text="${item.nome}"></td>
-
-				<td th:text="${item.quantidade}"></td>
-
-				<td th:text="${item.descricao}"></td>
-
-				<td th:text="${item.localizar}"></td>
-
-				<td>
-					<a class="delete btn btn-sm btn-danger" th:href="@{deletar_item/{id}(id=${item.IdItem})}"
-						onclick="if (confirm('Deseja realmente excluir o item?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
-				</td>
+				<td th:text="${movimentacao.Nome}"></td>
+				
+			 <td th:text="${movimentacao.IdPedido}"></td>
+				
+				<td th:text="${movimentacao.CodItem}"></td>
+											
+				<td th:text="${movimentacao.QuantidadeSaida}"></td>
+				
+				<td th:text="${movimentacao.QuantidadeEntrada}"></td>
+				
+				<td th:text="${movimentacao.DataCadastro}"></td>
 
 			</tr>
 		</tbody>
 	</table>
 
 
+
+
 </div>
 
+
 </body>
+
 </html>

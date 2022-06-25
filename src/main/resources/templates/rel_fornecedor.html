@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head th:insert="layout/cabecalho">
-<link rel="stylesheet" href="estilo.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
-	<title>Lista de Funcionarios</title>
+	<title>Relatório de Fornecedores</title>
 </head>
-	<d class = "imag">
-	<img id="imag" src="img/stoc.svg">  
+<d class="imag">
+	<img id="imag" src="img/stoc.svg">
 </d>
 <hr>
-	<d th:insert="layout/menu">
-	</d>
+<d th:insert="layout/menu">
+</d>
 <div class="container" color="black">
 	<form class="form-horizontal" method="GET" style="margin:10px">
-	 	<table class="table table-sm table-striped table-hover table-bordered">
-		<br>
-		<h1>
-			<center><p2 class="p2">Relatorio de Fornecedores</p2></center>
-		</h1>
-		<div th:classappend="${mensagem == null ? '' : ''}">
-			<div th:classappend="${tipo_mensagem}">
-				<td th:text="${mensagem}"></td>
-			</div>
-		</div>
-		<form class="form-horizontal" method="GET" style="margin:10px">
 		<table class="table table-sm table-striped table-hover table-bordered">
-			<thead>
-				<tr>
-					<th class="col-2">Nome</th>
-					<th class="col-2">Empresa</th>
-					<th class="col-2">Email</th>
-					<th class="col-1">Número</th>
-			
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="fornecedor:${lista_fornecedores}">
-					<td th:text="${fornecedor.nome}"></td>
-					<td th:text="${fornecedor.empresa}"></td>
-					<td th:text="${fornecedor.email}"></td>
-					<td th:text="${fornecedor.numero}"></td>
-				</tr>
-			</tbody>
-		</table>
-		</form>
-<form>
-	<button type="button" class="btn btn-primary mb-2 mr-2" onClick="window.print()">Imprimir/Salvar PDF</button>
-</form>
-	</div>
+			<br>
+			<h1>
+				<center>
+					<p2 class="p2">Relatório de Fornecedores</p2>
+				</center>
+			</h1>
+			<div th:classappend="${mensagem == null ? '' : ''}">
+				<div th:classappend="${tipo_mensagem}">
+					<td th:text="${mensagem}"></td>
+				</div>
+			</div>
+			<form class="form-horizontal" method="GET" style="margin:10px">
+				<table class="table table-sm table-striped table-hover table-bordered">
+					<thead>
+						<tr>
+							<th class="col-2">Nome</th>
+							<th class="col-2">Empresa</th>
+							<th class="col-2">Email</th>
+							<th class="col-1">Número</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="fornecedor:${lista_fornecedores}">
+							<td th:text="${fornecedor.nome}"></td>
+							<td th:text="${fornecedor.empresa}"></td>
+							<td th:text="${fornecedor.email}"></td>
+							<td th:text="${fornecedor.numero}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<form>
+				<button type="button" class="btn btn-primary mb-2 mr-2" onClick="window.print()">Imprimir/Salvar
+					PDF</button>
+			</form>
+</div>
 </body>
+
 </html>

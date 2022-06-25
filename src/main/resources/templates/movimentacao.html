@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Movimentação</title>
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="icon" href="img/stoc.png">
+</head>
+<style>
+	body {
+		background-color: lightblue;
+	}
+
+	.p2 {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	h1 {
+
+		color: cadetblue;
+	}
+
+	div {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	input[type=text],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	input[type=local],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	input[type=submit] {
+		width: 100%;
+		background-color: Gray;
+		color: white;
+		padding: 10px 10px;
+		margin: 8px 0;
+		text-align: center;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	input[type=submit]:hover {
+		background-color: #A9A9A9;
+	}
+
+	#descricao {
+		width: 100%;
+		padding: auto;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	#quantidade {
+		width: 100%;
+		padding: auto;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	div {
+		border-radius: 30px;
+		background-color: #f2f2f2;
+		padding: 20px;
+		width: 30%;
+	}
+
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+
+	.navbar a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 4px 6px;
+		text-decoration: none;
+		font-size: 15px;
+	}
+
+	.navbar a:hover {
+		background: #ddd;
+		color: black;
+	}
+</style>
+
+<body>
+
+
+	<d class="imag">
+
+		<img id="imag" src="img/stoc.svg">
+
+	</d>
+	<hr>
+
+	<d th:insert="layout/menu">
+
+	</d>
+	<center>
+		<h1>
+			<p class="p2">Movimentar Item
+		</h1>
+	</center>
+
+<!--	<form name="movimentacao" class="form-horizontal" th:action="@{/movimentacao}" method="POST" style="margin: 10px"
+	th:object="${movimentacaoModel}">
+	<div>
+	<label for="basic-url" class="font-weight-bold">Item</label>
+			<input class="form-control" type="text" maxlength="50" name="nome" th:field="*{CodItem}"
+				placeholder="Nome do fornecedor" required onkeyup="return AlteraMaiusculas(this)" />
+
+				
+					<label for="entradasaida">Entrada ou Saida de item:</label>
+				<input type="radio" id="entrada" name="drone"  value="entrada" checkedth:field="*{QuantidadeEntrada}">
+				<label for="entrada">Entrada</label>
+
+
+
+				<input type="radio" id="saida" name="drone"  value="saida"th:field="*{QuantidadeSaida}">
+				<label for="saida">Saida</label> -->
+				
+		
+		
+	
+			<br> <input button type="submit" value="Enviar">
+	</div>
+</form>
+	
+	
+	</body>
+
+</html>

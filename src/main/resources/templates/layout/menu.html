@@ -1,147 +1,155 @@
- <d id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="home">Home</a>
-		<a href="cadastraritem">Cadastro de Itens</a>
-		<a href="cadastrarfornecedor">Cadastrar fornecedores</a>
-		<a href="pedido">Pedir itens</a>
-		<a href="lista_relatorio">Lista Relatorio</a>
-		<a href="cadastro">Cadastro</a>
-	<a><form th:action="@{/logout}" method="post">
-					<button class="sair" type="submit">
-						Sair
-					</button>
-				</form></a>
-	</d>
-	
-	<style>
-		
-		.imag  {
-    width: 20%;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
+<d id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="home">Home</a>
+	<a href="cadastro">Cadastro de Usuários</a>
+	<a href="cadastraritem">Cadastro de Itens</a>
+	<a href="cadastrarfornecedor">Cadastrar Fornecedores</a>
+	<a href="pedido">Pedir itens</a>
+	<a href="lista_relatorio">Relatórios</a>
+	<a href="histmovimentacao">Movimentação de Itens</a>
+	<a>
+		<form th:action="@{/logout}" method="post">
+			<button class="sair" type="submit">
+				Sair
+			</button>
+		</form>
+	</a>
+</d>
 
-.sair {background-color: #111;
-  border: none;
-  object-position: 1px;
-  
-  }
-  	 sair:hover {
-			color: #f1f1f1;
-		}
+<style>
+	.imag {
+		width: 20%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 
+	.sair {
+		background-color: #111;
+		border: none;
+		object-position: 1px;
 
-		hr {
-    display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 4.0em;
-    margin-block-end: 0.1em;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    border-style: inset;
-    border-width: 1px;
-}
+	}
+
+	sair:hover {
+		color: #f1f1f1;
+	}
 
 
+	hr {
+		display: block;
+		unicode-bidi: isolate;
+		margin-block-start: 4.0em;
+		margin-block-end: 0.1em;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		border-style: inset;
+		border-width: 1px;
+	}
 
-		
-		body {
-			font-family: "Lato", sans-serif;
-		}
 
+
+
+	body {
+		font-family: "Lato", sans-serif;
+	}
+
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+	}
+
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sair {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+
+	.sidenav a:hover {
+		color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+
+	@media screen and (max-height: 450px) {
 		.sidenav {
-			height: 100%;
-			width: 0;
-			position: fixed;
-			z-index: 1;
-			top: 0;
-			left: 0;
-			background-color: #111;
-			overflow-x: hidden;
-			transition: 0.5s;
-			padding-top: 60px;
+			padding-top: 15px;
 		}
 
 		.sidenav a {
-			padding: 8px 8px 8px 32px;
-			text-decoration: none;
-			font-size: 25px;
-			color: #818181;
-			display: block;
-			transition: 0.3s;
+			font-size: 18px;
 		}
-		
-			.sair {
-			padding: 8px 8px 8px 32px;
-			text-decoration: none;
-			font-size: 25px;
-			color: #818181;
-			display: block;
-			transition: 0.3s;
-		}
+	}
+
+	body {
+		background-color: lightblue;
+	}
+
+	.p2 {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	h1 {
+
+		color: cadetblue;
+	}
+
+	div {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	li {
+
+		display: block;
+		margin-left: 6px;
+		margin-right: 5px;
+
+	}
+
+	b {
+		display: block;
+		margin-left: 915px;
+
+		width: 40%;
+	}
 
 
-		.sidenav a:hover {
-			color: #f1f1f1;
-		}
+	h1 {
 
-		.sidenav .closebtn {
-			position: absolute;
-			top: 0;
-			right: 25px;
-			font-size: 36px;
-			margin-left: 50px;
-		}
-
-		@media screen and (max-height: 450px) {
-			.sidenav {padding-top: 15px;}
-			.sidenav a {font-size: 18px;}
-		}
-
-body {
-  background-color: lightblue;
-}
-
-.p2 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-h1{
-
-	color: cadetblue;
-}
-div{
- display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-li {
-
-  display: block;
-  margin-left: 6px;
-  margin-right: 5px;
-
-}
- b {
-  display: block;
-  margin-left: 915px;
- 
-  width: 40%;
-}
-
-
-  h1{
-
-	color: cadetblue;
-}
-
-
-
-
+		color: cadetblue;
+	}
 </style>
 
 
@@ -149,14 +157,12 @@ li {
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-	<script>
-		function openNav() {
-			document.getElementById("mySidenav").style.width = "250px";
-		}
+<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
 
-		function closeNav() {
-			document.getElementById("mySidenav").style.width = "0";
-		}
-	</script>
-
-
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+</script>
