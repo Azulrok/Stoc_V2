@@ -48,10 +48,17 @@
 					</tbody>
 				</table>
 			</form>
-			<form>
-				<button type="button" class="btn btn-primary mb-2 mr-2" onClick="window.print()">Imprimir/Salvar
-					PDF</button>
-			</form>
+
+		<style type="text/css">
+			
+			@media print {
+				#noprint { display: none; }
+				button { opacity: 0%; }
+			}
+		</style>
+			
+		<button onClick="window.print()" class="btn btn-primary mb-2 mr-2"  onChange="hidden"> Imprimir/Salvar PDF </button>
+
 </div>
 </body>
 
