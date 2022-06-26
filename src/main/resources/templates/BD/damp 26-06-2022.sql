@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `stoc` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `stoc`;
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: stoc
@@ -52,7 +54,7 @@ CREATE TABLE `fornecedor` (
   `email` varchar(455) NOT NULL,
   `empresa` varchar(455) NOT NULL,
   PRIMARY KEY (`id_fornecedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,7 +63,7 @@ CREATE TABLE `fornecedor` (
 
 LOCK TABLES `fornecedor` WRITE;
 /*!40000 ALTER TABLE `fornecedor` DISABLE KEYS */;
-INSERT INTO `fornecedor` VALUES (6,965993568,'eduardo','eduardomoraes@bratec.com','bratec');
+INSERT INTO `fornecedor` VALUES (6,965993568,'eduardo','eduardomoraes@bratec.com','bratec'),(7,965993568,'Guilherme Neves','guilhermeneves@nubank.com','Nubank'),(8,940028922,'Davi Santana','davisantana@suselinux.org','SUSE Linux Enterprise');
 /*!40000 ALTER TABLE `fornecedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,10 +130,16 @@ DROP TABLE IF EXISTS `movimentacao`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `movimentacao` (
   `id_movimentacao` int NOT NULL AUTO_INCREMENT,
-  `cod_movimentacao` int NOT NULL,
-  `cod_data` int NOT NULL,
-  PRIMARY KEY (`id_movimentacao`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `cod_item` int NOT NULL,
+  `id_pedido` int NOT NULL,
+  `quantidade_entrada` int NOT NULL,
+  `quantidade_saida` int NOT NULL,
+  `data_cadastro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `nome` varchar(455) NOT NULL,
+  PRIMARY KEY (`id_movimentacao`),
+  KEY `fk_id_pedido_idx` (`id_pedido`),
+  CONSTRAINT `fk_id_pedido` FOREIGN KEY (`id_pedido`) REFERENCES `movimentacao` (`id_movimentacao`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,6 +148,7 @@ CREATE TABLE `movimentacao` (
 
 LOCK TABLES `movimentacao` WRITE;
 /*!40000 ALTER TABLE `movimentacao` DISABLE KEYS */;
+INSERT INTO `movimentacao` VALUES (1,1,1,1,1,'2022-06-23 20:32:25','');
 /*!40000 ALTER TABLE `movimentacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -207,8 +216,9 @@ CREATE TABLE `usuario` (
   `email` varchar(455) NOT NULL,
   `senha` varchar(455) DEFAULT NULL,
   `nome` varchar(455) NOT NULL,
+  `sexo` varchar(45) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +227,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'11111111111','edvaldo1239@gmail.com','$2a$10$qjUccFl01AIo2ZCWbyEscO2Ve4p8X7P6NZQ8Nh8Cy3Bkjxr188Vnm','Edvaldo'),(2,'22222222222','edvaldo.junior@aluno.etejk.faetec.rj.gov.br','$2a$10$qjUccFl01AIo2ZCWbyEscO2Ve4p8X7P6NZQ8Nh8Cy3Bkjxr188Vnm','guilherme');
+INSERT INTO `usuario` VALUES (1,'11111111111','edvaldo1239@gmail.com','$2a$10$0hhH3hjeLkcrMuhfrJvC5OosdjqJPsikALTrz4ofPrxvXk1swOiBm','Edvaldo',''),(2,'22222222222','edvaldo.junior@aluno.etejk.faetec.rj.gov.br','$2a$10$qjUccFl01AIo2ZCWbyEscO2Ve4p8X7P6NZQ8Nh8Cy3Bkjxr188Vnm','guilherme',''),(9,'99999999999','arturdoval@mbl.com',NULL,'Artur do Val',''),(10,'99999999999','pasteldeflango@mbl.com',NULL,'kim katagiri',''),(11,'11111111113','eduardomoraes@bratecnicas.com',NULL,'Eduardo ','');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -233,7 +243,7 @@ CREATE TABLE `usuarios_permissoes` (
   `usuarios_id_usuario` int NOT NULL,
   `permissoes_id_permissao` int NOT NULL,
   PRIMARY KEY (`id_usuario_permissao`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -245,10 +255,6 @@ LOCK TABLES `usuarios_permissoes` WRITE;
 INSERT INTO `usuarios_permissoes` VALUES (1,1,1);
 /*!40000 ALTER TABLE `usuarios_permissoes` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'stoc'
---
 
 --
 -- Dumping routines for database 'stoc'
@@ -263,4 +269,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-17 20:39:58
+-- Dump completed on 2022-06-26  0:59:13
