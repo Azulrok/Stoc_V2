@@ -147,7 +147,7 @@
 <form name="cadastraritem" class="form-horizontal" th:action="@{/cadastraritem}" method="POST" style="margin: 10px"
 	th:object="${itemModel}">
 	<div>
-
+<input class="form-control" type="hidden" maxlength="50" name="IdItem" th:field="*{IdItem}" />
 		<p class="p2"> <label for="nome">Nome do item:</label>
 			<input required type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item"><br>
 

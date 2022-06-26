@@ -54,6 +54,10 @@
 				<td th:text="${item.descricao}"></td>
 				<td id="noprint" th:text="${item.localizar}"></td>
 					<td>
+					
+					
+					<a id="noprint" class=" btn btn-sm btn-danger"
+							th:href="@{alterar_item/{id}(id=${item.IdItem})}">Alterar</a>
 						<a id="noprint" class="delete btn btn-sm btn-danger" th:href="@{deletar_item/{id}(id=${item.IdItem})}" onclick="if (confirm('Deseja realmente excluir o item?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
 
 

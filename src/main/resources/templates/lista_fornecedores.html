@@ -42,8 +42,8 @@
 				<th class="col-2">Nome</th>
 				<th class="col-2">Empresa</th>
 				<th class="col-2">Email</th>
-				<th class="col-1">Número</th>
-				<th id="noprint" class="col-1">Excluir</th>
+				<th class="col-2">Número</th>
+				<th id="noprint" class="col-2">Excluir</th>
 			</tr>
 		</thead>
 
@@ -54,6 +54,9 @@
 				<td th:text="${fornecedor.email}"></td>
 				<td th:text="${fornecedor.numero}"></td>
 					<td>
+					
+							<a id="noprint" class=" btn btn-sm btn-danger"
+							th:href="@{alterar_fornecedor/{id}(id=${fornecedor.idFornecedor})}">Alterar</a>
 						<a id="noprint" class="delete btn btn-sm btn-danger"
 							th:href="@{deletar_fornecedor/{id}(id=${fornecedor.idFornecedor})}"
 							onclick="if (confirm('Deseja realmente excluir o fornecedor?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>

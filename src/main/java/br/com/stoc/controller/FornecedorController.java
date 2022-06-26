@@ -47,6 +47,18 @@ public class FornecedorController {
 			
 			
 			
+			@GetMapping(value = "/alterar_fornecedor/{id}")
+			public ModelAndView alterarFornecedor(FornecedorModel fornecedorModel,ModelMap model, @PathVariable("id") Long idFornecedor) {
+			FornecedorModel fornecedor = new FornecedorModel();
+			fornecedor = fornecedorRepository.getOne(idFornecedor);
+			model.addAttribute("fornecedorModel",fornecedorRepository.findById(idFornecedor));
+			return new ModelAndView("cadastrarfornecedor",model);
+			}
+			
+			
+			
+			
+			
 			@GetMapping("/deletar_fornecedor/{id}")
 			public String delete(FornecedorModel fornecedor, @PathVariable("id") long id, RedirectAttributes attr) {
 				fornecedor = (FornecedorModel) this.fornecedorRepository.getOne(id);

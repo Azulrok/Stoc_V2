@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 import br.com.stoc.model.ItemModel;
-
+import br.com.stoc.model.UsuarioModel;
 import br.com.stoc.repository.ItemRepository;
 
 @Controller
@@ -34,13 +34,28 @@ public class ItemContoller {
     }
 	
 	@GetMapping("/deletar_item/{id}")
-	public String delete(ItemModel fornecedor, @PathVariable("id") long id, RedirectAttributes attr) {
-		fornecedor = (ItemModel) this.itemRepository.getOne(id);
-		this.itemRepository.delete(fornecedor); // Exclui o usuario
+	public String delete(ItemModel item, @PathVariable("id") long id, RedirectAttributes attr) {
+		item = (ItemModel) this.itemRepository.getOne(id);
+		this.itemRepository.delete(item); // Exclui o usuario
 		attr.addFlashAttribute("mensagem", "Item excluído com sucesso.");
 		attr.addFlashAttribute("tipo_mensagem", "alert alert-sucess");
 		return "redirect:../consulta";
 	}
+	
+	
+	
+	
+	@GetMapping(value = "/alterar_item/{id}")
+	public ModelAndView alterarItem(ItemModel itemModel,ModelMap model, @PathVariable("id") Long idItem) {
+	ItemModel item = new ItemModel();
+	item = itemRepository.getOne(idItem);
+	model.addAttribute("itemModel",itemRepository.findById(idItem));
+	return new ModelAndView("cadastraritem",model);
+	}
+	
+	
+	
+	
 	
 	
 	@PostMapping(value = "/cadastraritem")

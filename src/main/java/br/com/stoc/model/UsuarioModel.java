@@ -37,7 +37,8 @@ public class UsuarioModel implements Serializable{
 	private String senha;
 	@Column(name = "nome")
 	private String nome;
-
+	@Column(name = "sexo")
+	private String sexo;
 	
 	
 	
@@ -79,6 +80,12 @@ public class UsuarioModel implements Serializable{
 	}
 	
 
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
 	public List<PermissaoModel> getPermissoes() {
 		return permissoes;
 	}

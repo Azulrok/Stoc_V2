@@ -157,6 +157,8 @@
 		<form name="cadastrarfornecedor" class="form-horizontal" th:action="@{/cadastrarfornecedor}" method="POST"
 			style="margin: 10px" th:object="${fornecedorModel}">
 
+<input class="form-control" type="hidden" maxlength="50" name="idFornecedor" th:field="*{idFornecedor}" />
+
 			<label for="basic-url" class="font-weight-bold">Nome do Fornecedor</label>
 			<input class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}"
 				placeholder="Nome do fornecedor" required onkeyup="return AlteraMaiusculas(this)" />

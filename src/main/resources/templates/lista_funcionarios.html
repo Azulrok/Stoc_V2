@@ -39,18 +39,21 @@
 
 		<thead>
 			<tr>
-				<th class="col-1">Nome</th>
+				<th class="col-2">Nome</th>
+				<th class="col-2">Sexo</th>
 				<th class="col-2">CPF</th>
-				<th class="col-1">Email</th>
-				<th id="noprint" class="col-1">Ação</th>
+				<th class="col-2">Email</th>
+				<th id="noprint" class="col-2">Ação</th>
 			</tr>
 		</thead>
 
 		<tbody>
 			<tr th:each="usuario:${usuarios}">
 				<td th:text="${usuario.nome}"></td>
+				<td th:text="${usuario.sexo}"></td>
 				<td th:text="${usuario.cpf}"></td>
 				<td th:text="${usuario.email}"></td>
+				
 					<td>
 						<a id="noprint" class=" btn btn-sm btn-danger"
 							th:href="@{alterar_usuario/{id}(id=${usuario.id_usuario})}">Alterar</a>
