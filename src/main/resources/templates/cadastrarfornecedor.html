@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Cadastro fornecedor</title>
+	<title>Cadastrar Fornecedor</title>
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
 </head>
@@ -146,7 +146,7 @@
 
 	<center>
 		<h1>
-			<p class="p2">Cadastro de Fornecedor
+			<p class="p2">Cadastrar Fornecedor
 		</h1>
 	</center>
 
@@ -159,19 +159,19 @@
 
 <input class="form-control" type="hidden" maxlength="50" name="idFornecedor" th:field="*{idFornecedor}" />
 
-			<label for="basic-url" class="font-weight-bold">Nome do Fornecedor</label>
+			<label for="basic-url" class="font-weight-bold">Nome do Fornecedor:</label>
 			<input class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}"
-				placeholder="Nome do fornecedor" required onkeyup="return AlteraMaiusculas(this)" />
+				placeholder="Nome do Fornecedor" required onkeyup="return AlteraMaiusculas(this)" />
 
 
 			<p class="p2"> <label for="name">Nome da Empresa:</label>
 				<input required type="text" id="name" name="empresa" th:field="*{empresa}"
-					placeholder="Nome da empresa:" />
+					placeholder="Nome da Empresa" />
 
 				<br>
 			<p class="p2"> <label for="tel">Número do Representante:</label>
 				<input required type="tel" id="numero" name="numero" th:field="*{numero}"
-					placeholder="Número do Representante:" />
+					placeholder="Número do Representante" />
 
 
 				<br>

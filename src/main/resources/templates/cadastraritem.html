@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Cadastro item</title>
+	<title>Cadastrar Item</title>
 	<link rel="icon" href="img/stoc.png">
 </head>
 <d class="imag">
@@ -139,7 +139,7 @@
 <br><br>
 <center>
 	<h1>
-		<p class="p2">Cadastrar item
+		<p class="p2">Cadastrar Item
 	</h1>
 </center>
 
@@ -148,47 +148,29 @@
 	th:object="${itemModel}">
 	<div>
 <input class="form-control" type="hidden" maxlength="50" name="IdItem" th:field="*{IdItem}" />
-		<p class="p2"> <label for="nome">Nome do item:</label>
+		<p class="p2"> <label for="nome">Nome do Item:</label>
 			<input required type="text" id="nome" name="nome" th:field="*{nome}" placeholder="Nome do Item"><br>
 
 
 
 			<br>
-		<p class="p2"> <label for="quantidade">Quantidade do item:</label>
+		<p class="p2"> <label for="quantidade">Quantidade do Item:</label>
 			<input required type="number" id="quantidade" class="quantnum" name="quantidade" th:field="*{quantidade}"
-				placeholder="Quantidade de Item"><br>
+				placeholder="Quantidade do Item"><br>
 
 			<br>Descrição do Item:<br>
 			<textarea required type="text" id="descricao" name="descricao" rows="4" cols="50" th:field="*{descricao}"
-				placeholder=" Descrição do item">
+				placeholder=" Descrição do Item">
 			</textarea><br>
 
 
 
 			<br>
-			<label for="localizar">Insira local de armazenamento:</label>
+			<label for="localizar">Local de Armazenamento:</label>
 			<input required type="text" id="localizar" name="localizar" th:field="*{localizar}"
-				placeholder="Local de armazenamento">
+				placeholder="Local de Armazenamento">
 
 
-			<!--
-  <br><label for="perecivel" >Produto perecivel:</label>
-
-  <input type="radio" id="sim" name="drone" value="sim">
-  <label for="sim">Sim</label>
-
-	 <input type="radio" id="nao" name="drone" value="nao"
-         checked>
-  <label for="nao">Não</label><br>
-
-
-
-
-<br>
-   <label for="date" >Data de Validade:</label> 
-    <input id="date" type="date"><br> 
-
--->
 
 
 			<br> <input button type="submit" value="Enviar">

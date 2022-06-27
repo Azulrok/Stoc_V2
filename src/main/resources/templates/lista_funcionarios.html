@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 
+<style>
+	
+	* {
+		overflow-x: hidden;
+	}
+	
+</style>
+
 <d class="imag">
 	<img id="imag" src="img/stoc.svg">
 </d>
@@ -54,10 +62,10 @@
 				<td th:text="${usuario.cpf}"></td>
 				<td th:text="${usuario.email}"></td>
 				
-					<td>
-						<a id="noprint" class=" btn btn-sm btn-danger"
+					<td id="noprint">
+						<a class=" btn btn-sm btn-danger"
 							th:href="@{alterar_usuario/{id}(id=${usuario.id_usuario})}">Alterar</a>
-						<a id="noprint" class="delete btn btn-sm btn-danger" th:href="@{deletar/{id}(id=${usuario.id_usuario})}"
+						<a class="delete btn btn-sm btn-danger" th:href="@{deletar/{id}(id=${usuario.id_usuario})}"
 							onclick="if (confirm('Deseja realmente excluir o usuário?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
 
 

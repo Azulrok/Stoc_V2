@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Cadastro de Usuário</title>
+	<title>Cadastrar Usuário</title>
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
 </head>
@@ -22,7 +22,7 @@
 	</d>
 	<center>
 		<h1>
-			<p class="p2">Área de Cadastro
+			<p class="p2">Cadastrar Usuário
 		</h1>
 	</center>
 
@@ -208,9 +208,9 @@
 
 			<input class="form-control" type="hidden" maxlength="50" name="id_usuario" th:field="*{id_usuario}" />
 			<p class="p2">
-				<label for="basic-url" class="font-weight-bold">Nome de usuário</label>
+				<label for="basic-url" class="font-weight-bold">Nome do Usuário:</label>
 				<input required class="form-control" type="text" maxlength="50" name="nome" th:field="*{nome}"
-					placeholder="Nome"  onkeyup="return AlteraMaiusculas(this)" />
+					placeholder="Nome do Usuário"  onkeyup="return AlteraMaiusculas(this)"/>
 
 
 
@@ -220,12 +220,12 @@
 
 
 
-				<label for="basic-url" class="font-weight-bold">E-mail</label>
+				<label for="basic-url" class="font-weight-bold">E-mail:</label>
 				<input required maxlenght="70" class="form-control" type="email" name="email" th:field="*{email}"
-					placeholder="Email" />
+					placeholder="E-mail" />
 
-				<label for="basic-url" class="font-weight-bold">Confirmar E-mail</label>
-				<input required class="form-control" type="email" name="confirmar_email" placeholder="Confirmar Email"/><br>
+				<label for="basic-url" class="font-weight-bold">Confirmar E-mail:</label>
+				<input required class="form-control" type="email" name="confirmar_email" placeholder="Confirmar E-mail"/><br>
 
 
 
@@ -238,13 +238,13 @@
 				<input type="radio" id="Feminino" name="drone" value="Feminino"th:field="*{sexo}">
 				<label for="Feminino">Feminino</label><br>
 				
-                <br><label for="tipo">Tipo de usuário:</label><br>
+                <br><label for="tipo">Tipo de Usuário:</label><br>
 				
 				<input type="radio" id="adm" name="drone1" value="administrador" checked>
 				<label for="adm">Administrador</label>
 				
 				<input type="radio" id="almox" name="drone1" value="almoxarife" checked>
-				<label for="almox">Almoxarife</label>
+				<label for="almox">Almoxarife</label><br>
 			
 				<br> <input button type="submit" value="Enviar">
 	</div>

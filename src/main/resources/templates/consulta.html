@@ -8,12 +8,20 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 
+<style>
+	
+	* {
+		overflow-x: hidden;
+	}
+	
+</style>
+
 <d class="imag">
 	<img id="imag" src="img/stoc.svg">
 </d>
 
 <hr>
-<d th:insert="layout/menu">
+<d id="noprint" th:insert="layout/menu">
 </d>
 
 <div class="container">
@@ -42,7 +50,7 @@
 				<th class="col-2">Nome do item</th>
 				<th class="col-2">Quantidade</th>
 				<th class="col-2">Descrição</th>
-				<th id="noprint" class="col-1">Local</th>
+				<th class="col-1">Local</th>
 				<th id="noprint" class="col-1">Alterar/Excluir</th>
 			</tr>
 		</thead>
@@ -52,13 +60,13 @@
 				<td th:text="${item.nome}"></td>
 				<td th:text="${item.quantidade}"></td>
 				<td th:text="${item.descricao}"></td>
-				<td id="noprint" th:text="${item.localizar}"></td>
-					<td>
+				<td th:text="${item.localizar}"></td>
+					<td id="noprint">
 					
 					
-					<a id="noprint" class=" btn btn-sm btn-danger"
+					<a class=" btn btn-sm btn-danger"
 							th:href="@{alterar_item/{id}(id=${item.IdItem})}">Alterar</a>
-						<a id="noprint" class="delete btn btn-sm btn-danger" th:href="@{deletar_item/{id}(id=${item.IdItem})}" onclick="if (confirm('Deseja realmente excluir o item?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
+						<a class="delete btn btn-sm btn-danger" th:href="@{deletar_item/{id}(id=${item.IdItem})}" onclick="if (confirm('Deseja realmente excluir o item?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
 
 
 						<!-- BOTÃO RELATÓRIO DA IDEIA ANTERIOR-->

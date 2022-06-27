@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 
+<style>
+	
+	* {
+		overflow-x: hidden;
+	}
+	
+</style>
+
 <d class="imag">
 	<img id="imag" src="img/stoc.svg">
 </d>
@@ -53,11 +61,11 @@
 				<td th:text="${fornecedor.empresa}"></td>
 				<td th:text="${fornecedor.email}"></td>
 				<td th:text="${fornecedor.numero}"></td>
-					<td>
+					<td id="noprint">
 					
-							<a id="noprint" class=" btn btn-sm btn-danger"
+							<a class=" btn btn-sm btn-danger"
 							th:href="@{alterar_fornecedor/{id}(id=${fornecedor.idFornecedor})}">Alterar</a>
-						<a id="noprint" class="delete btn btn-sm btn-danger"
+						<a class="delete btn btn-sm btn-danger"
 							th:href="@{deletar_fornecedor/{id}(id=${fornecedor.idFornecedor})}"
 							onclick="if (confirm('Deseja realmente excluir o fornecedor?')){return true;}else{event.stopPropagation(); event.preventDefault();};">Excluir</a>
 
