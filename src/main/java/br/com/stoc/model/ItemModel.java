@@ -20,7 +20,7 @@ import javax.persistence.Table;
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		@Column(name = "id_item")
 		private Long IdItem;
-		@Column(name = "quantidade")
+		@Column(name = "quantidade_min")
 		private Integer Quantidade;
 		@Column(name = "descricao")
 		private String Descricao;

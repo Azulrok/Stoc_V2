@@ -154,9 +154,11 @@
 
 
 			<br>
-		<p class="p2"> <label for="quantidade">Quantidade do Item:</label>
+		<p class="p2"> <label for="quantidade">Quantidade Mínima:</label>
 			<input required type="number" id="quantidade" class="quantnum" name="quantidade" th:field="*{quantidade}"
 				placeholder="Quantidade do Item"><br>
+
+			<br>
 
 			<br>Descrição do Item:<br>
 			<textarea required type="text" id="descricao" name="descricao" rows="4" cols="50" th:field="*{descricao}"
@@ -164,20 +166,14 @@
 			</textarea><br>
 
 
-
 			<br>
 			<label for="localizar">Local de Armazenamento:</label>
 			<input required type="text" id="localizar" name="localizar" th:field="*{localizar}"
 				placeholder="Local de Armazenamento">
 
-
-
-
 			<br> <input button type="submit" value="Enviar">
 	</div>
 </form>
 <br><br>
-
-
 </body>
 </html>

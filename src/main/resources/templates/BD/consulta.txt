@@ -1,0 +1,4 @@
+SELECT i.nome, i.quantidade_min , m.sum(m.quantidade) 
+FROM stoc.movimentacao m, stoc.item i 
+where m.id_item = i.id_item and m.id_tipo_movimentacao = 1
+group by m.id_item;

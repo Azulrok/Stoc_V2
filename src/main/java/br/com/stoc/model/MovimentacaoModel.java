@@ -25,18 +25,16 @@ import javax.validation.Valid;
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		@Column(name = "id_movimentacao")
 		private Long idMovimentacao;
-		@Column(name = "id_pedido")
-		private Long idPedido;
-		@Column(name = "cod_item")
-		private Integer codItem;
+		@Column(name = "id_setor")
+		private Long idSetor;
+		@Column(name = "id_item")
+		private Integer idItem;
 		@Column(name = "data_cadastro")
 		private Date dataCadastro;
-		@Column(name = "quantidade_saida")
-		private Integer quantidadeSaida;
-		@Column(name = "quantidade_entrada")
-		private Integer quantidadeEntrada;
-		@Column(name = "nome")
-		private String Nome;
+		@Column(name = "quantidade")
+		private Integer quantidade;
+		@Column(name = "id_tipo_movimentacao")
+		private String idTipoMovimentacao;
 			
 		public Long getIdMovimentacao() {
 			return idMovimentacao;
@@ -44,17 +42,18 @@ import javax.validation.Valid;
 		public void setIdMovimentacao(Long idMovimentacao) {
 			this.idMovimentacao = idMovimentacao;
 		}
-		public Long getIdPedido() {
-			return idPedido;
+
+		public Long getIdSetor() {
+			return idSetor;
 		}
-		public void setIdPedido(Long idPedido) {
-			this.idPedido = idPedido;
+		public void setIdSetor(Long idSetor) {
+			this.idSetor = idSetor;
 		}
-		public Integer getCodItem() {
-			return codItem;
+		public Integer getIdItem() {
+			return idItem;
 		}
-		public void setCodItem(Integer codItem) {
-			this.codItem = codItem;
+		public void setIdItem(Integer idItem) {
+			this.idItem = idItem;
 		}
 		public Date getDataCadastro() {
 			return dataCadastro;
@@ -62,27 +61,18 @@ import javax.validation.Valid;
 		public void setDataCadastro(Date dataCadastro) {
 			this.dataCadastro = dataCadastro;
 		}
-		public Integer getQuantidadeSaida() {
-			return quantidadeSaida;
+		
+		public String getIdTipoMovimentacao() {
+			return idTipoMovimentacao;
 		}
-		public void setQuantidadeSaida(Integer quantidadeSaida) {
-			this.quantidadeSaida = quantidadeSaida;
+		public void setIdTipoMovimentacao(String idTipoMovimentacao) {
+			this.idTipoMovimentacao = idTipoMovimentacao;
 		}
-		public Integer getQuantidadeEntrada() {
-			return quantidadeEntrada;
+		public Integer getQuantidade() {
+			return quantidade;
 		}
-		public void setQuantidadeEntrada(Integer quantidadeEntrada) {
-			this.quantidadeEntrada = quantidadeEntrada;
-		}
-		public String getNome() {
-			return Nome;
-		}
-		public void setNome(String nome) {
-			Nome = nome;
+		public void setQuantidade(Integer quantidade) {
+			this.quantidade = quantidade;
 		}
 	
-	
-		
-		
-		
 	}

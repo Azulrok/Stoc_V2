@@ -6,6 +6,11 @@
 	<title>Movimentação</title>
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="icon" href="img/stoc.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <style>
 	body {
@@ -21,10 +26,13 @@
 		color: cadetblue;
 	}
 
+
+
 	div {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
+		border-radius: 30px;
+		background-color: #f2f2f2;
+		padding: auto;
+		width: 30%;
 	}
 
 	input[type=text],
@@ -85,12 +93,6 @@
 		box-sizing: border-box;
 	}
 
-	div {
-		border-radius: 30px;
-		background-color: #f2f2f2;
-		padding: 20px;
-		width: 30%;
-	}
 
 	.navbar {
 		overflow: hidden;
@@ -115,6 +117,13 @@
 		background: #ddd;
 		color: black;
 	}
+	
+	.dropdown{
+		padding: 20px;
+		text-align: center;
+		border-radius: 26px;
+		position:relative;
+	}
 </style>
 
 <body>
@@ -136,31 +145,56 @@
 		</h1>
 	</center>
 
-<!--	<form name="movimentacao" class="form-horizontal" th:action="@{/movimentacao}" method="POST" style="margin: 10px"
-	th:object="${movimentacaoModel}">
-	<div>
-	<label for="basic-url" class="font-weight-bold">Item</label>
-			<input class="form-control" type="text" maxlength="50" name="nome" th:field="*{CodItem}"
-				placeholder="Nome do fornecedor" required onkeyup="return AlteraMaiusculas(this)" />
+	<form name="movimentacao" class="form-horizontal" th:action="@{/movimentacao}" method="POST" style="margin: 10px"
+		th:object="${movimentacaoModel}">
 
-				
-					<label for="entradasaida">Entrada ou Saida de item:</label>
-				<input type="radio" id="entrada" name="drone"  value="entrada" checkedth:field="*{QuantidadeEntrada}">
-				<label for="entrada">Entrada</label>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Setor Requisitante
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+
+			</ul>
+
+			<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tipo Movimentação
+					<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+
+				</ul>
+
+
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Nome do Item
+						<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+
+					</ul>
+
+					<br>
+					<p class="p2"> <label for="quantidade">Quantidade Mínima:</label>
+						<input required type="number" id="quantidade" class="quantnum" name="quantidade"
+							th:field="*{quantidade}" placeholder="Quantidade do Item"><br>
+
+				</div> <br>
+			</div>
+		</div>
+		</div>
+	</form>
+
+	<br>
 
 
 
-				<input type="radio" id="saida" name="drone"  value="saida"th:field="*{QuantidadeSaida}">
-				<label for="saida">Saida</label> -->
-				
-		
-		
-	
-			<br> <input button type="submit" value="Enviar">
-	</div>
-</form>
-	
-	
-	</body>
+
+</body>
 
 </html>
