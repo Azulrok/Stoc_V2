@@ -9,7 +9,13 @@
 	<!-- Importa o cabecalho -->
 </head>
 
+<style>
 
+	* {
+		overflow-x: hidden;		
+	}
+
+</style>
 
 <d class="imag">
 
@@ -69,11 +75,11 @@
 		<tbody>
 			<tr th:each="movimentacao:${movimentacoes}">
 
-			<td th:text="${movimentacao.idSetor}"></td>
+			<td th:text="${movimentacao.setor.nome}"></td>
 
-			<td th:text="${movimentacao.idTipoMovimentacao}"></td>
+			<td th:text="${movimentacao.TipoMovimentacao.nome}"></td>
 
-			<td th:text="${movimentacao.idItem}"></td>
+			<td th:text="${movimentacao.item.nome}"></td>
 									
 			<td th:text="${movimentacao.Quantidade}"></td>
 			

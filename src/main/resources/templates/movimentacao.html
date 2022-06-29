@@ -147,52 +147,43 @@
 
 	<form name="movimentacao" class="form-horizontal" th:action="@{/movimentacao}" method="POST" style="margin: 10px"
 		th:object="${movimentacaoModel}">
+		
+<p class="p2"> <label for="Setor">Setor Requisitante:</label>
+<select class="form-select" aria-label="setor" id="idSetor" name="idSetor" >
+<option selected>Selecione o Setor</option>
+<option th:each="setor:${setores}" th:value="${setor.idSetor}" th:text="${setor.nome}"></option>
 
-		<div class="dropdown">
-			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Setor Requisitante
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu">
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
+</select>
 
-			</ul>
+<p class="p2"> <label for="Tipo"> Tipo Movimentação:</label>
+<select class="form-select" aria-label="tipo" id="idTipoMovimentacao" name="idTipoMovimentacao" >
+<option selected>Selecione a Movimentação</option>
+<option th:each="tipo:${tipomovimentacao}" th:value="${tipo.idTipoMovimentacao}" th:text="${tipo.nome}"></option>
 
-			<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tipo Movimentação
-					<span class="caret"></span></button>
-				<ul class="dropdown-menu">
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-
-				</ul>
+</select>
 
 
-				<div class="dropdown">
-					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Nome do Item
-						<span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
+<p class="p2"> <label for="item"> Item:</label>
+<select class="form-select" aria-label="item" id="idItem" name="idItem" >
+<option selected>Selecione a Item</option>
+<option th:each="item:${itens}" th:value="${item.idItem}" th:text="${item.nome}"></option>
 
-					</ul>
+</select>
 
-					<br>
-					<p class="p2"> <label for="quantidade">Quantidade Mínima:</label>
-						<input required type="number" id="quantidade" class="quantnum" name="quantidade"
-							th:field="*{quantidade}" placeholder="Quantidade do Item"><br>
+	<br>
+	<p class="p2"> <label for="quantidade">Quantidade:</label>
+	<input required type="number" id="quantidade" class="quantnum" name="quantidade" placeholder="Quantidade do Item">
+	<br>
+			
+			
+			
+			<br> <input button type="submit" value="Movimentar">
 
-				</div> <br>
-			</div>
-		</div>
-		</div>
 	</form>
 
 	<br>
 
-
+			
 
 
 </body>

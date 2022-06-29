@@ -74,6 +74,8 @@ public class CadastroController {
 
 		ModelAndView mv = new ModelAndView("redirect:lista_funcionarios");
 		usuarioRepository.save(usuario);
+		
+		
 		atributes.addFlashAttribute("mensagem", "Usuário cadastrado com sucesso!");
 
 		return mv;
